@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+nav ul { list-style: none; background: #333; padding: 10px; display: flex; margin:0;align-items: center; } /*title bar*/
+nav ul li { position: relative; color: white; font-size: 20px; padding: 25px; } /*services link*/
+nav ul li ul { display: none; position: absolute; background: #444; padding: 0; width: 310px; } /*services dropdown box colour */
+nav ul li:hover ul { display: block; } /*services dropdown box on hover*/
+nav ul li a { color:white; text-decoration: none; padding: 20px; font-size: 20px; }/* all other options in the title bar*/
+header, footer { background: #f4f4f4; padding: 20px; text-align: center; }
