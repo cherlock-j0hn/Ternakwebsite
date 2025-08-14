@@ -12,7 +12,9 @@
   <p class = "content">For a FREE NO OBLIGATION ESTIMATE, connect with us and start realizing the potential of your home. </p>
   <p class = "content"> Phone: 416-410-6696 </p>
   <p class = "content"> Email: ternakhomeimpv8@gmail.com </p>
-  <p class = "content"> Address: 159 Winnett Ave, Toronto, ON M6C 3L7 </p>
+  <p class = "content"> Address:
+    <a href="https://www.google.ca/maps/place/159+Winnett+Ave,+York,+ON+M6C+3L7/" target="_blank">159 Winnett Ave, Toronto, ON M6C 3L7</a>
+  </p>
   <p class = "heading"> QUESTIONS? SEND US A MESSAGE!</p>
   <form id="contact-form">
   <label for="name">Name:</label><br>
@@ -59,6 +61,25 @@
 
   <button type="submit">Send</button>
   </form>
+
+  <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+  <script>
+  (function() {
+    emailjs.init("YOUR_USER_ID"); // replace with your EmailJS user ID
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+      .then(function() {
+        alert("Message sent successfully!");
+      }, function(error) {
+        alert("Failed to send: " + JSON.stringify(error));
+      });
+  });
+  </script>
+
 
   <p class = "content"> We look forward to speaking with you about your renovation dreams!</p>
   
