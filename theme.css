@@ -1,0 +1,138 @@
+/* theme.css - global styles for Ternak Home */
+
+
+.heading {
+  color: brown;
+  font-size: 40px;
+  margin-left: 40px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.content {
+  font-size: 20px;
+  margin-left: 60px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/* Buttons */
+button {
+  background-color: #271616;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #961616;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #004080;
+}
+
+a:hover {
+  color: #ff6600;
+}
+
+/* Container with padding */
+.container {
+  padding: 20px;
+}
+
+/* Full-width hero image section */
+
+
+form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+input, textarea{
+  width: 97%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border-style:ridge;
+  border-width: 2px;
+  border-color: #271616;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.multi-select { /*box border*/
+  position: relative;
+  padding:10px;
+  width: 970px;
+  border-width: 2px;
+  border-color: #271616;
+  border-radius: 5px;
+  cursor: pointer;
+  background: white;
+}
+
+.multi-select:focus {
+  border-color: #ad0000;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+
+.selected-box {
+  padding: 8px;
+  min-height: 20px;
+  border-color: #ad0000;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+  
+
+.options-container {
+  display: none; /* hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 2px solid #ad0000;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  outline: none;
+  accent-color: rgba(255, 0, 0, 0.5);
+}
+
+input[type="checkbox"]:focus {
+  box-shadow: 0 0 2px 2px rgba(255, 0, 0, 0.5);
+  border-radius: 3px;
+}
+
+.options-container label {
+  display: block;
+  padding: 5px 10px;
+}
+
+.options-container label:hover {
+  background-color: #f0f0f0;
+}
+
