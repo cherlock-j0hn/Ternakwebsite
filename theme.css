@@ -3,7 +3,7 @@
 
 .heading {
   color: brown;
-  font-size: 40px;
+  font-size: 30px;
   margin-left: 40px;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -35,7 +35,11 @@ button:hover {
 /* Links */
 a {
   text-decoration: none;
-  color: #004080;
+  color: #1e09b9;
+}
+
+a:hover {
+  color: #b90e80;
 }
 
 

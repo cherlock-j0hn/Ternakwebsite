@@ -11,4 +11,66 @@ nav ul li ul li a {display:block; padding: 10px;}
 nav ul li ul li a:hover { background: #e40808; color:white;} /*services dropdown box on hover*/
 nav ul li a { color:white; text-decoration: none; padding: 0; font-size: 20px;}/* all other options in the title bar*/
 header { background: #f4f4f4; padding: 20px; text-align: center; }
-footer { background: #7a0202; padding: 20px; text-align: center; color:white;}
+footer { background: #7a0202; padding: 0; text-align: center; color:white;}
+
+.background {
+  background-image: url(images/intro_pics/footer.png); /* replace with your image */
+  background-size: cover;     
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section1{
+  display: flex;
+  align-items: flex-start;
+  gap: 95px;
+  padding: 10px;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;      /* stack images vertically */
+  gap: 0;                   /* space between images */
+  flex-shrink: 0;              /* prevent shrinking */
+}
+
+.image-year{
+    margin-left: 0;
+}
+
+.text-right {
+  flex: 1;
+  text-align: left;     /* left-align text */
+  display: flex;        /* optional if you need column layout */
+  flex-direction: column; /* stack h2 and p vertically */
+  justify-content: flex-start; /* align items at the top */
+  align-items: flex-start;     /* align text to left edge */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+}
+
+email{
+    color:rgb(122, 171, 245);
+    text-decoration: none;
+}
+
+email:hover {
+  color: #d55bfa;
+}
+
+.section2{
+  float: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+}
+
+.section3{
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
