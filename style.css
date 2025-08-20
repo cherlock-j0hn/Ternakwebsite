@@ -84,37 +84,9 @@ email:hover {
   margin: 20px;
 }
 
-.box {
-  width: 200px;          /* all boxes same width */
-  height: 200px;         /* all boxes same height */
-  text-align: center;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: #f9f9f9;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;  /* stack image & text */
-  justify-content: flex-start;
-}
-
-.box img {
-  width: 100%;
-  height: 140px;          /* fixed image height */
-  object-fit: cover;      /* crop/resize image to fit nicely */
-  border-radius: 8px;
-}
-
-.box p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #581010;
-  flex-grow: 1;          /* ensures text fills space evenly */
-}
-
 .box1 {
   width: 150px;          /* all boxes same width */
-  height: 150px;         /* all boxes same height */
+  height: 160px;         /* all boxes same height */
   text-align: center;
   padding: 15px;
   border: 1px solid #ccc;
@@ -138,4 +110,18 @@ email:hover {
   font-size: 18px;
   color: black;
   flex-grow: 1;          /* ensures text fills space evenly */
+}
+
+.color1 {
+    background-color: rgb(224, 142, 35);
+    padding: 10px;
+}
+
+.color2 {
+    background-color: #e40808;
+    padding: 10px;
+}
+
+.color3 {
+    padding: 10px;
 }
