@@ -8,6 +8,7 @@
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 
@@ -113,7 +114,7 @@ input:focus, textarea:focus {
   background: white;
   border: 2px solid #ad0000;
   border-radius: 5px;
-  max-height: 150px;
+  max-height: 250px;
   overflow-y: auto;
   z-index: 100;
 }

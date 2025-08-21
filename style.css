@@ -125,3 +125,105 @@ email:hover {
 .color3 {
     padding: 10px;
 }
+
+
+
+.sub-headings {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-weight: bold;
+    font-size: 50px;
+    color: #7a0202;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Experience Section */
+.experience-section {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+
+.experience-section h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.service-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Indicate interactivity */
+}
+
+/* Hover Effects */
+.service-box:hover {
+    background-color: #f7e0e0;
+    color: #fff;
+}
+
+.service-box h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Services Section */
+.our-services-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+
+
+.our-services-section h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #880606;
+  background-color: #fff;
+  border: 2px solid #5c0c0c;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #5c0c0c;
+    color: #fff;
+}
