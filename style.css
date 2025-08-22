@@ -77,56 +77,6 @@ email:hover {
 }
 
 /* about us page */
-.box-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin: 20px;
-}
-
-.box1 {
-  width: 150px;          /* all boxes same width */
-  height: 160px;         /* all boxes same height */
-  text-align: center;
-  padding: 15px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  background: #f9f9f9;
-  display: flex;
-  flex-direction: column;  /* stack image & text */
-  justify-content: flex-start;
-}
-
-.box1 img {
-  width: 100%;
-  height: 100px;          /* fixed image height */
-  object-fit: cover;      /* crop/resize image to fit nicely */
-  border-radius: 8px;
-}
-
-.box1 p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: black;
-  flex-grow: 1;          /* ensures text fills space evenly */
-}
-
-.color1 {
-    background-color: rgb(224, 142, 35);
-    padding: 10px;
-}
-
-.color2 {
-    background-color: #e40808;
-    padding: 10px;
-}
-
-.color3 {
-    padding: 10px;
-}
-
-
 
 .sub-headings {
     font-family: Arial, sans-serif;
@@ -137,7 +87,8 @@ email:hover {
     font-size: 50px;
     color: #7a0202;
 }
-.container {
+
+.container-about {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -154,19 +105,13 @@ email:hover {
   margin-bottom: 40px;
 }
 
-
-.experience-section h2 {
-  font-size: 2.5em;
-  color: #333;
-  margin-bottom: 20px;
-}
-
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   max-width: 100%;
   box-sizing: border-box;
+  padding: 20px;
 }
 
 .service-box {
@@ -194,21 +139,18 @@ email:hover {
   color: #666;
 }
 
-/* Services Section */
-.our-services-section {
-  text-align: center;
-  padding: 40px 20px;
+.service-box-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
-
-
-.our-services-section h2 {
-  font-size: 2.5em;
-  color: #333;
-  margin-bottom: 20px;
+.service-box-link:hover .service-box {
+    background-color: #4a90e2;
+    color: #fff;
 }
 
-.cta-button {
+.git-button {
   display: inline-block;
   padding: 12px 24px;
   margin-top: 20px;
@@ -223,7 +165,7 @@ email:hover {
   cursor: pointer;
 }
 
-.cta-button:hover {
+.git-button:hover {
     background-color: #5c0c0c;
     color: #fff;
 }

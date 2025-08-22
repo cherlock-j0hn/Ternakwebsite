@@ -47,19 +47,4 @@ document.addEventListener('click', (event) => {
 
 // About page
 
-// Trigger animations on scroll  - about page
-/*
- window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.experience-section, .our-services-section');
-    sections.forEach(section => {
-        const sectionPosition = section.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.1;
-        if (sectionPosition < screenPosition && !section.classList.contains('animate')) {
-            section.classList.add('animate');
-            const boxes = section.querySelectorAll('.service-box');
-            boxes.forEach(box => box.classList.add('animate'));
-        }
-    });
-});
-*/
     
