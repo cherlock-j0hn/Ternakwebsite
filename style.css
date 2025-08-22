@@ -4,7 +4,7 @@ nav ul { list-style: none; background-color: rgba(51, 51, 51); padding: 0; displ
 nav ul li { position: relative; color: white; font-size: 20px; padding: 0;} /*services link*/
 nav ul li:hover {color:#f59b9b;}
 nav ul li a:hover { color: #f59b9b; } /*title bar hover colour*/
-nav ul li ul { display: none; position: absolute; background: #444; padding: 0; width: 240px; font-size: 20px;} /*services dropdown box colour */
+nav ul li ul { display: none; position: absolute; background: #444; padding: 0; width: 300px; font-size: 20px; left: 30%; transform: translateX(-30%);} /*services dropdown box colour */
 
 nav ul li:hover ul { display: block;} /*services dropdown box on hover*/
 nav ul li ul li a {display:block; padding: 10px;}
