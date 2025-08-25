@@ -1,14 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Additions and Lofts</title>
+<head><meta charset="UTF-8"><title>Basement and Waterproofing</title>
+  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="services_styles.css">
   <script src="include.js" defer></script>
 </head>
 <body>
   <div id="header-placeholder"></div>
-    <h1>Additions and Lofts</h1>
-    <p>Structural and architectural specialties.</p>
-    <p>Additions - expanding space in the house</p>
+  <img src="images/services_pics/basement.jpg" alt="Basement" width="100%" height="10%">
+  <div class="container">
+    <!-- Header Section -->
+    <div class="animate-on-scroll">
+      <p class="heading">Basement and Waterproofing</p>
+      <p class="content">
+        At Ternak Home Improvement Inc., we specialize in transforming your basement into a dry, functional, and inviting space. Our expert basement and waterproofing services ensure your home remains protected from water damage, mold, and structural issues, providing peace of mind and increasing your property’s value.      
+      </p>
+    </div>
+
+    <!-- Services Description -->
+    <div class="animate-on-scroll">
+      <p class="heading">Our Basement and Waterproofing Services</p>
+    
+      <p>
+        <div class="sub-heading">
+          1. Interior Waterproofing
+        </div>
+        <div class="content">
+          We install interior drainage systems, sump pumps, and vapor barriers to manage water seepage and prevent flooding. Our solutions are designed to redirect water away from your home efficiently.
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          2. Exterior Waterproofing
+        </div>
+        <div class="content">
+          Our team applies waterproof coatings, installs exterior drainage systems, and seals foundation cracks to stop water from entering your basement at its source.
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          3. Foundation Crack Repair
+        </div>
+        <div class="content">
+          Using industry-leading materials, we repair cracks in your foundation to prevent leaks and ensure structural integrity.      
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          4. Sump Pump Installation and Maintenance
+        </div>
+        <div class="content">
+          We install reliable sump pumps to remove excess water and offer maintenance services to keep them functioning optimally.      
+        </div>
+      </p>
+      <p class="sub-heading">
+        <div class="sub-heading">
+          5. Basement Finishing and Remodeling
+        </div>
+        <div class="content">
+        Once your basement is dry, we can transform it into a livable space, such as a home office, gym, or entertainment area, customized to your needs.      
+        </div>
+      </p>
+      
+      
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">basement</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="" data-caption="Basement View 1">
+            <img src="" alt="Basement View 1">
+            <div class="gallery-caption">Before</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="" data-caption="Basement View 2">
+            <img src="" alt="Basement View 2">
+            <div class="gallery-caption">Construction in progress</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="" data-caption="Basement View 3">
+            <img src="" alt="Basement View 3">
+            <div class="gallery-caption">Construction in progress</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="" data-caption="Basement View 4">
+            <img src="" alt="Basement View 4">
+            <div class="gallery-caption">After</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta animate-on-scroll">
+      <p class="heading">Ready to Transform Your Home?</p>
+      <p class="content1">Contact us today for a free, no-obligation estimate and let’s bring your vision to life!</p>
+      <a href="contact.html">Get a Free Estimate</a>
+    </div>
+  </div>
+
+  <script>
+    // Scroll-triggered animations
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(element => observer.observe(element));
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(image => {
+      image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = image.dataset.fullsrc;
+        lightboxImg.alt = image.querySelector('img').alt;
+        lightboxCaption.textContent = image.dataset.caption;
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
   <div id="footer-placeholder"></div>
 </body>
 </html>

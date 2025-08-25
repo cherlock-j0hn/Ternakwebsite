@@ -1,14 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Additions and Lofts</title>
+<head><meta charset="UTF-8"><title>Bricks and Carpentry</title>
+  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="services_styles.css">
   <script src="include.js" defer></script>
 </head>
 <body>
   <div id="header-placeholder"></div>
-    <h1>Additions and Lofts</h1>
-    <p>Structural and architectural specialties.</p>
-    <p>Additions - expanding space in the house</p>
+  <img src="images/services_pics/bricks.jpg" alt="Bricks" width="100%" height="10%">
+  <div class="container">
+    <!-- Header Section -->
+    <div class="animate-on-scroll">
+      <p class="heading">Bricks and Carpentry</p>
+      <p class="content">
+        At Ternak Home Improvement Inc., our bricks and carpentry services combine timeless craftsmanship with modern techniques to enhance your home’s beauty, durability, and functionality. Whether you’re looking for stunning brickwork or custom woodwork, our skilled team delivers high-quality results tailored to your vision.   
+      </p>
+    </div>
+
+    <!-- Services Description -->
+    <div class="animate-on-scroll">
+      <p class="heading">Our Bricks and Carpentry Services</p>
+    
+      <p>
+        <div class="sub-heading">
+          1. Brickwork and Masonry
+        </div>
+        <div class="content">
+          Create stunning exterior facades, fireplaces, retaining walls, or patios with our expert bricklaying services. We ensure structural integrity and flawless finishes.
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          2. Custom Carpentry
+        </div>
+        <div class="content">
+          From built-in cabinetry to custom trim and moldings, our carpentry services add warmth and character to your interiors, crafted to your exact specifications.       
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          3. Brick Repairs and Restoration
+        </div>
+        <div class="content">
+          We repair cracked or damaged brickwork, repoint mortar joints, and restore historic masonry to preserve your home’s charm and strength.        
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          4. Wooden Decks and Pergolas
+        </div>
+        <div class="content">
+          Enhance your outdoor living space with custom-built decks, pergolas, or fences, designed for beauty and durability using high-quality wood or composite materials.        
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          5. Structural Carpentry
+        </div>
+        <div class="content">
+          Our team handles framing, beams, and other structural woodwork to support home additions, renovations, or new construction with precision and safety.        
+        </div>
+      </p>
+      
+      
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">Bathroom Upgrade</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="images/services_pics/bath1.jpg" data-caption="Bathroom View 1">
+            <img src="images/services_pics/bath1.jpg" alt="Bathroom View 1">
+            <div class="gallery-caption">Bathroom Pic 1</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/bath2.jpeg" data-caption="Bathroom View 2">
+            <img src="images/services_pics/bath2.jpeg" alt="Bathroom View 2">
+            <div class="gallery-caption">Bathroom Pic 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/bath3.jpeg" data-caption="Bathroom View 3">
+            <img src="images/services_pics/bath3.jpg" alt="Bathroom View 3">
+            <div class="gallery-caption">Bathroom Pic 3</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/bath4.jpeg" data-caption="Bathroom View 4">
+            <img src="images/services_pics/bath4.jpg" alt="Bathroom View 4">
+            <div class="gallery-caption">Bathroom Pic 4</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">Kitchen renovation</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="images/services_pics/kit1.jpeg" data-caption="Kitchen View 1">
+            <img src="images/services_pics/kit1.jpeg" alt="Kitchen View 1">
+            <div class="gallery-caption">Kitchen Pic 1</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/kit2.jpg" data-caption="Kitchen View 2">
+            <img src="images/services_pics/kit2.jpg" alt="Kitchen View 2">
+            <div class="gallery-caption">Kitchen Pic 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/kit3.jpg" data-caption="Kitchen View 3">
+            <img src="images/services_pics/kit3.jpg" alt="Kitchen View 3">
+            <div class="gallery-caption">Kitchen Pic 3</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/kit4.jpg" data-caption="Kitchen View 4">
+            <img src="images/services_pics/kit4.jpg" alt="Kitchen View 4">
+            <div class="gallery-caption">Kitchen Pic 4</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta animate-on-scroll">
+      <p class="heading">Ready to Transform Your Home?</p>
+      <p class="content1">Contact us today for a free, no-obligation estimate and let’s bring your vision to life!</p>
+      <a href="contact.html">Get a Free Estimate</a>
+    </div>
+  </div>
+
+  <script>
+    // Scroll-triggered animations
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(element => observer.observe(element));
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(image => {
+      image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = image.dataset.fullsrc;
+        lightboxImg.alt = image.querySelector('img').alt;
+        lightboxCaption.textContent = image.dataset.caption;
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
   <div id="footer-placeholder"></div>
 </body>
 </html>

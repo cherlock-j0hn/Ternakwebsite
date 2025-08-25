@@ -2,6 +2,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    margin-bottom: 20px;
 }
 /* Image Gallery Styles */
 .gallery {
@@ -82,7 +83,7 @@
     color: white;
     font-size: 2em;
     cursor: pointer;
-    background: #271616;
+    background: #4d1111;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -92,7 +93,7 @@
     transition: background-color 0.3s ease;
 }
 .lightbox-close:hover {
-    background-color: #3b2525;
+    background-color: #941a1a;
 }
 /* Scroll Animation */
 .animate-on-scroll {
@@ -110,7 +111,7 @@
     margin-top: 20px;
 }
 .cta a {
-    background-color: #271616;
+    background-color: #3d0505;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -122,10 +123,10 @@
     transition: background-color 0.3s ease;
 }
 .cta a:hover {
-    background-color: #3b2525;
+    background-color: #791313;
 }
 .cta a:focus {
-    outline: 2px solid #271616;
+    outline: 2px solid #3d0505;
     outline-offset: 2px;
 }
 /* Responsive Adjustments */
