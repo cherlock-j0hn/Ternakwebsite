@@ -1,14 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Additions and Lofts</title>
+<head><meta charset="UTF-8"><title>Drywall and Eavestrough</title>
+  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="services_styles.css">
   <script src="include.js" defer></script>
 </head>
 <body>
   <div id="header-placeholder"></div>
-    <h1>Additions and Lofts</h1>
-    <p>Structural and architectural specialties.</p>
-    <p>Additions - expanding space in the house</p>
+  <img src="images/services_pics/eav.jpg" alt="Eavestrough" width="100%" height="10%">
+  <div class="container">
+    <!-- Header Section -->
+    <div class="animate-on-scroll">
+      <p class="heading">Drywall and Eavestrough</p>
+      <p class="content">
+        At Ternak Home Improvement Inc., our drywall and eavestrough services deliver seamless interior finishes and reliable exterior water management to enhance your home’s appearance, durability, and protection. Our expert team provides customized solutions to meet your specific needs, ensuring high-quality results that elevate your property.
+      </p>
+    </div>
+
+    <!-- Services Description -->
+    <div class="animate-on-scroll">
+      <p class="heading">Our Drywall and Eavestrough Services</p>
+
+      <p>
+        <div class="sub-heading">
+          1. Drywall Installation
+        </div>
+        <div class="content">
+          We install high-quality drywall for walls and ceilings, creating smooth, durable surfaces ready for painting or texturing, perfect for new construction or renovations.        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          2. Drywall Repair and Finishing
+        </div>
+        <div class="content">
+          From patching holes to fixing cracks and water damage, we restore your drywall to a flawless finish with expert taping, mudding, and sanding.        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          3. Eavestrough Installation
+        </div>
+        <div class="content">
+          We install seamless aluminum or steel eavestroughs to efficiently channel rainwater away from your home, protecting your foundation and landscaping.        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          4. Eavestrough Cleaning and Repairs
+        </div>
+        <div class="content">
+          Our team provides thorough cleaning and maintenance to prevent clogs, as well as repairs for leaks, sagging, or damaged eavestroughs.        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          5. Custom Drywall Features
+        </div>
+        <div class="content">
+Elevate your interiors with custom drywall designs, such as accent walls, arched doorways, or built-in shelving, tailored to your style.        </div>
+      </p>
+      
+      
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">Drywall</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="Before">
+            <img src="images/services_pics" alt="Before">
+            <div class="gallery-caption">Before</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="During Construction Pic 1">
+            <img src="images/services_pics" alt="During Construction Pic 1">
+            <div class="gallery-caption">During Construction Pic 1</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="During Construction Pic 2">
+            <img src="images/services_pics" alt="During Construction Pic 2">
+            <div class="gallery-caption">During Construction Pic 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="After">
+            <img src="images/services_pics" alt="After">
+            <div class="gallery-caption">After</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">Eavestrough</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="View 1">
+            <img src="images/services_pics" alt="View 1">
+            <div class="gallery-caption">Pic 1</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="View 2">
+            <img src="images/services_pics" alt="View 2">
+            <div class="gallery-caption">Pic 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="2">
+            <img src="images/services_pics" alt="2">
+            <div class="gallery-caption">2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="3">
+            <img src="images/services_pics" alt="3">
+            <div class="gallery-caption">3</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta animate-on-scroll">
+      <p class="heading">Ready to Transform Your Home?</p>
+      <p class="content1">Contact us today for a free, no-obligation estimate and let’s bring your vision to life!</p>
+      <a href="contact.html">Get a Free Estimate</a>
+    </div>
+  </div>
+
+  <script>
+    // Scroll-triggered animations
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(element => observer.observe(element));
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(image => {
+      image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = image.dataset.fullsrc;
+        lightboxImg.alt = image.querySelector('img').alt;
+        lightboxCaption.textContent = image.dataset.caption;
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
   <div id="footer-placeholder"></div>
 </body>
 </html>

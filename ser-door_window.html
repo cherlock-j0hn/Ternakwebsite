@@ -1,13 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><title>Doors and Windows</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="include.js" defer></script>
+  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="services_styles.css">
+  <script src="include.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <h1>Doors and Windows</h1>
-    <p>Gallery of our door and window renovation work.</p>
-    <div id="footer-placeholder"></div>
+  <div id="header-placeholder"></div>
+  <img src="images/services_pics/door.jpg" alt="Door" width="100%" height="10%">
+  <div class="container">
+    <!-- Header Section -->
+    <div class="animate-on-scroll">
+      <p class="heading">Doors and Windows</p>
+      <p class="content">
+        At Ternak Home Improvement Inc., our doors and windows services enhance your home’s beauty, security, and energy efficiency. From stylish entry doors to modern, energy-saving windows, our expert team delivers custom solutions that elevate your home’s functionality and curb appeal.
+      </p>
+    </div>
+
+    <!-- Services Description -->
+    <div class="animate-on-scroll">
+      <p class="heading">Our Doors and Windows Services</p>
+    
+      <p>
+        <div class="sub-heading">
+          1. Entry and Patio Doors
+        </div>
+        <div class="content">
+            Choose from elegant front doors, sliding glass doors, or French patio doors to create a welcoming entrance or seamless indoor-outdoor flow.        
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          2. Window Replacement and Installation
+        </div>
+        <div class="content">
+            We install energy-efficient windows, including double-hung, casement, bay, or custom designs, to enhance natural light and ventilation.        
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          3. Storm and Security Doors
+        </div>
+        <div class="content">
+            Protect your home from the elements and enhance security with sturdy storm doors or reinforced security doors tailored to your needs.       
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          4. Window and Door Repairs
+        </div>
+        <div class="content">
+            We repair or replace damaged frames, glass, seals, and hardware to restore functionality and improve energy efficiency.        
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          5. Custom Window Treatments
+        </div>
+        <div class="content">
+            Complement your new windows with custom blinds, shutters, or shades for added style, privacy, and light control.        
+        </div>
+      </p>
+      
+      
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">Doors</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="Before">
+            <img src="images/services_pics" alt="Before">
+            <div class="gallery-caption">Before</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="During Construction Pic 1">
+            <img src="images/services_pics" alt="During Construction Pic 1">
+            <div class="gallery-caption">During Construction Pic 1</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="During Construction Pic 2">
+            <img src="images/services_pics" alt="During Construction Pic 2">
+            <div class="gallery-caption">During Construction Pic 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="After">
+            <img src="images/services_pics" alt="After">
+            <div class="gallery-caption">After</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">Windows</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="View 1">
+            <img src="images/services_pics" alt="View 1">
+            <div class="gallery-caption">Pic 1</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="View 2">
+            <img src="images/services_pics" alt="View 2">
+            <div class="gallery-caption">Pic 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="2">
+            <img src="images/services_pics" alt="2">
+            <div class="gallery-caption">2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="3">
+            <img src="images/services_pics" alt="3">
+            <div class="gallery-caption">3</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta animate-on-scroll">
+      <p class="heading">Ready to Transform Your Home?</p>
+      <p class="content1">Contact us today for a free, no-obligation estimate and let’s bring your vision to life!</p>
+      <a href="contact.html">Get a Free Estimate</a>
+    </div>
+  </div>
+
+  <script>
+    // Scroll-triggered animations
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(element => observer.observe(element));
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(image => {
+      image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = image.dataset.fullsrc;
+        lightboxImg.alt = image.querySelector('img').alt;
+        lightboxCaption.textContent = image.dataset.caption;
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
+  <div id="footer-placeholder"></div>
 </body>
 </html>

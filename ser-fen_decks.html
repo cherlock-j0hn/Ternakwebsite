@@ -1,14 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Additions and Lofts</title>
+<head><meta charset="UTF-8"><title>Fences and Decks</title>
+  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="services_styles.css">
   <script src="include.js" defer></script>
 </head>
 <body>
   <div id="header-placeholder"></div>
-    <h1>Additions and Lofts</h1>
-    <p>Structural and architectural specialties.</p>
-    <p>Additions - expanding space in the house</p>
+  <img src="images/services_pics/de.jpeg" alt="Deck" width="100%" height="10%">
+  <div class="container">
+    <!-- Header Section -->
+    <div class="animate-on-scroll">
+      <p class="heading">Fences and Decks</p>
+      <p class="content">
+        At Ternak Home Improvement Inc., our fences and decks services transform your outdoor space into a beautiful, functional, and private oasis. Our expert team delivers custom designs and high-quality craftsmanship to create durable, stylish fences and decks that enhance your home’s curb appeal and usability.    
+      </p>
+    </div>
+
+    <!-- Services Description -->
+    <div class="animate-on-scroll">
+      <p class="heading">Our Fences and Decks Services</p>
+
+      <p>
+        <div class="sub-heading">
+          1. Custom Fence Installation
+        </div>
+        <div class="content">
+We design and install fences in wood, vinyl, aluminum, or composite, tailored for privacy, security, or decorative purposes to suit your property.        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          2. Deck Design and Construction
+        </div>
+        <div class="content">
+Create your dream outdoor living space with custom decks built from premium wood or low-maintenance composite materials, designed for durability and style.        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          3. Fence Repairs and Maintenance
+        </div>
+        <div class="content">
+We repair damaged fences, replace broken panels, and provide staining or sealing to extend the life and appearance of your fence.        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          4. Deck Repairs and Refinishing
+        </div>
+        <div class="content">
+Our team restores worn decks through repairs, refinishing, or staining, ensuring safety and a refreshed look.        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          5. Custom Features
+        </div>
+        <div class="content">
+Enhance your fence or deck with additions like gates, pergolas, built-in seating, or lighting for added functionality and aesthetic appeal.        </div>
+      </p>
+
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">Fences</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="Before">
+            <img src="images/services_pics" alt="Before">
+            <div class="gallery-caption">Before</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="During Construction Pic 1">
+            <img src="images/services_pics" alt="During Construction Pic 1">
+            <div class="gallery-caption">During Construction Pic 1</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="During Construction Pic 2">
+            <img src="images/services_pics" alt="During Construction Pic 2">
+            <div class="gallery-caption">During Construction Pic 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="After">
+            <img src="images/services_pics" alt="After">
+            <div class="gallery-caption">After</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">decks</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="View 1">
+            <img src="images/services_pics" alt="View 1">
+            <div class="gallery-caption">Pic 1</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="View 2">
+            <img src="images/services_pics" alt="View 2">
+            <div class="gallery-caption">Pic 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="2">
+            <img src="images/services_pics" alt="2">
+            <div class="gallery-caption">2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics" data-caption="3">
+            <img src="images/services_pics" alt="3">
+            <div class="gallery-caption">3</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta animate-on-scroll">
+      <p class="heading">Ready to Transform Your Home?</p>
+      <p class="content1">Contact us today for a free, no-obligation estimate and let’s bring your vision to life!</p>
+      <a href="contact.html">Get a Free Estimate</a>
+    </div>
+  </div>
+
+  <script>
+    // Scroll-triggered animations
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(element => observer.observe(element));
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(image => {
+      image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = image.dataset.fullsrc;
+        lightboxImg.alt = image.querySelector('img').alt;
+        lightboxCaption.textContent = image.dataset.caption;
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
   <div id="footer-placeholder"></div>
 </body>
 </html>

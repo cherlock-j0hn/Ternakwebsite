@@ -1,13 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><title>Concrete and Porches</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="include.js" defer></script>
+  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="services_styles.css">
+  <script src="include.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <h1>Concrete and Porches</h1>
-    <p>Gallery of our concrete and porch renovation work.</p>
-    <div id="footer-placeholder"></div>
+  <div id="header-placeholder"></div>
+  <img src="images/services_pics/conc.jpg" alt="Porch" width="100%" height="10%">
+  <div class="container">
+    <!-- Header Section -->
+    <div class="animate-on-scroll">
+      <p class="heading">Concrete and Porches</p>
+      <p class="content">
+        At Ternak Home Improvement Inc., our concrete and porches services are designed to enhance your home’s functionality, curb appeal, and durability. From sturdy concrete foundations to inviting porch designs, our expert team delivers custom solutions that elevate your outdoor and structural space.
+      </p>
+    </div>
+
+    <!-- Services Description -->
+    <div class="animate-on-scroll">
+      <p class="heading">Our Concrete and Porches Services</p>
+    
+      <p>
+        <div class="sub-heading">
+          1. Concrete Foundations and Slabs
+        </div>
+        <div class="content">
+            We pour and finish strong, level concrete foundations and slabs for homes, garages, or additions, ensuring structural integrity and longevity.        
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          2. Custom Porch Design and Construction
+        </div>
+        <div class="content">
+            Create a welcoming front porch, cozy back porch, or spacious wraparound porch with custom designs that blend style and functionality.        
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          3. Concrete Patios and Walkways
+        </div>
+        <div class="content">
+            Transform your outdoor space with durable, stylish concrete patios and walkways, available in stamped, stained, or polished finishes.        
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          4. Concrete Repair and Resurfacing
+        </div>
+        <div class="content">
+            We repair cracked or uneven concrete surfaces and offer resurfacing solutions to restore their appearance and strength.        
+        </div>
+      </p>
+      <p>
+        <div class="sub-heading">
+          5. Porch Repairs and Upgrades
+        </div>
+        <div class="content">
+            From replacing worn decking to adding railings or screening, we restore and enhance existing porches to improve safety and aesthetics.        
+        </div>
+      </p>
+      
+      
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">Concrete Work</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="images/services_pics/conc1.webp" data-caption="Before">
+            <img src="images/services_pics/conc1.webp" alt="Before">
+            <div class="gallery-caption">Before</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/conc2.jpg" data-caption="During Construction Pic 1">
+            <img src="images/services_pics/conc2.jpg" alt="During Construction Pic 1">
+            <div class="gallery-caption">During Construction Pic 1</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/conc3.webp" data-caption="During Construction Pic 2">
+            <img src="images/services_pics/conc3.webp" alt="During Construction Pic 2">
+            <div class="gallery-caption">During Construction Pic 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/conc4.webp" data-caption="After">
+            <img src="images/services_pics/conc4.webp" alt="After">
+            <div class="gallery-caption">After</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="gallery animate-on-scroll">
+      <!-- Project 1 -->
+      <div class="project">
+        <p class="heading">Porches</p>
+        <div class="project-gallery">
+          <div class="gallery-image" data-fullsrc="images/services_pics/por1.jpg" data-caption="Porch View 1">
+            <img src="images/services_pics/por1.jpg" alt="Porch View 1">
+            <div class="gallery-caption">Porch Pic 1</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/por2.jpg" data-caption="Porch View 2">
+            <img src="images/services_pics/por2.jpg" alt="Porch View 2">
+            <div class="gallery-caption">Porch Pic 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/por3.jpg" data-caption="Porch 2">
+            <img src="images/services_pics/por3.jpg" alt="Porch 2">
+            <div class="gallery-caption">Porch 2</div>
+          </div>
+          <div class="gallery-image" data-fullsrc="images/services_pics/por4.jpg" data-caption="Porch 3">
+            <img src="images/services_pics/por4.jpg" alt="Porch 3">
+            <div class="gallery-caption">Porch 3</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta animate-on-scroll">
+      <p class="heading">Ready to Transform Your Home?</p>
+      <p class="content1">Contact us today for a free, no-obligation estimate and let’s bring your vision to life!</p>
+      <a href="contact.html">Get a Free Estimate</a>
+    </div>
+  </div>
+
+  <script>
+    // Scroll-triggered animations
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(element => observer.observe(element));
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(image => {
+      image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = image.dataset.fullsrc;
+        lightboxImg.alt = image.querySelector('img').alt;
+        lightboxCaption.textContent = image.dataset.caption;
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
+  <div id="footer-placeholder"></div>
 </body>
 </html>
