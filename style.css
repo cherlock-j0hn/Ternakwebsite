@@ -98,10 +98,17 @@ email:hover {
 /* Experience Section */
 .experience-section {
   text-align: center;
-  padding: 10px 20px;
+  padding: 0 10px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.button-section {
+  text-align: center;
+  padding: 0 10px;
+  border-radius: 10px;
   margin-bottom: 40px;
 }
 
@@ -120,12 +127,14 @@ email:hover {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer; /* Indicate interactivity */
+  transition: transform 0.3s;
 }
 
 /* Hover Effects */
 .service-box:hover {
     background-color: #f7e0e0;
     color: #fff;
+    transform: scale(1.05);
 }
 
 .service-box h3 {
@@ -154,6 +163,7 @@ email:hover {
   display: inline-block;
   padding: 12px 24px;
   margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 1em;
   font-weight: bold;
   text-align: center;
@@ -163,6 +173,8 @@ email:hover {
   border: 2px solid #5c0c0c;
   border-radius: 25px;
   cursor: pointer;
+  justify-content: center;
+  position: center;
 }
 
 .git-button:hover {
