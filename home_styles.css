@@ -1,3 +1,9 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
 
 @keyframes fadeInDown {
     from {
@@ -130,4 +136,38 @@ section.visible {
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     z-index: 10;
     animation: none;
+}
+
+.animate-on-scroll1 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Call to Action Button */
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+.cta a {
+    background-color: #3d0505;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.cta a:hover {
+    background-color: #791313;
+}
+.cta a:focus {
+    outline: 2px solid #3d0505;
+    outline-offset: 2px;
 }
