@@ -24,28 +24,34 @@
       <section id="testimonials">
         <p class="heading">What Our Clients Say</p>
         <div class="testimonial">
-            <p>"I needed to gut my 2nd floor bathroom, and basement. I called Ternak because they had done a good job on my roof and deck. I wasn’t disappointed. The end result for both was excellent. All throughout, Dale, the project manager, kept in touch with me and helped me through unexpected challenges, which were many in a 105 year old house. Sandro and Michael, the main contractors, were diligent, hardworking, and extremely skilled tradesmen with an eye for design. Very friendly, and thorough. I plan to use Ternak again for all remaining work on my house in the future."</p>
-            <cite>- Louise</cite>
+          <div class="star-rating" data-rating="5"></div>
+          <p>"I needed to gut my 2nd floor bathroom, and basement. I called Ternak because they had done a good job on my roof and deck. I wasn’t disappointed. The end result for both was excellent. All throughout, Dale, the project manager, kept in touch with me and helped me through unexpected challenges, which were many in a 105 year old house. Sandro and Michael, the main contractors, were diligent, hardworking, and extremely skilled tradesmen with an eye for design. Very friendly, and thorough. I plan to use Ternak again for all remaining work on my house in the future."</p>
+          <p>- Louise</p>
         </div>
         <div class="testimonial">
+          <div class="star-rating" data-rating="5"></div>
             <p>"They did a great job fixing my woodpecker-damaged stucco, repairing the porch stone work, and building and installing railings to match my existing ones. They finished on time and within budget, and exceeded expectations when it came to the railing design."</p>
-            <cite>- Bob Builder</cite>
+            <p>- Bob Builder</p>
         </div>
         <div class="testimonial">
+          <div class="star-rating" data-rating="5"></div>
             <p>"I had a leaky porch, cracked concrete over a basement room.. the best solution was proposed which I latter researched as the better way to solve my problem. the quote was competitive. I had flagstone laid and stairs redone.. once started they came everyday and were focused on the job. the workmanship is great. the materials sourced for the job were top grade, no cheaping out on materials, the concrete work is good, I'm very happy with the result, I would not hesitate to use them again, I'm fully satisfied. I'm a hands on person and know good work and what attention to detail is"</p>
-            <cite>- Donald G</cite>
+            <p>- Donald G</p>
         </div>
         <div class="testimonial">
+          <div class="star-rating" data-rating="4"></div>
             <p>"Ternak Home Improvements has completed many interior and exterior projects to my specifications and satisfaction. Roofing, tuck pointing, brick patio, driveway and retaining wall, concrete work (internal and exterior), patio door installation, restoration of a 100+ year old garage, updating of electrical and plumbing systems, complete bathroom upgrade, drywalling, painting and flooring. Workers are professional, integrate well with other trades when necessary. Dale involves me with all aspects of a project and communicates regularly on progress. I would not hesitate to refer Ternak and contract them in the future."</p>
-            <cite>- Elizabeth B</cite>
+            <p>- Elizabeth B</p>
         </div>
         <div class="testimonial">
+          <div class="star-rating" data-rating="4"></div>
             <p>"Ternak Home Improvements re-laid our brick walkway and installed a new patio. They completed the project exactly when they said they would and the work is excellent. We would certainly recommend their services."</p>
-            <cite>- Terry F</cite>
+            <p>- Terry F</p>
         </div>
         <div class="testimonial">
+          <div class="star-rating" data-rating="5"></div>
             <p>"Two thumbs up in my dealings with Ternak Home Improvement (Dale and Tony – both courteous and professional). Excellent workmanship by Gus, Walter and Mario in building a wooden fence (disposing of the old one) and re-doing the exterior of a decades old garage that had became an eyesore. The work was done promptly with attention paid to details. My wife and I are very pleased with the results. I do not hesitate in recommending Ternak."</p>
-            <cite>- John M</cite>
+            <p>- John M</p>
         </div>
       </section>
     </div>
@@ -117,6 +123,29 @@
     }, observerOptions);
 
     collageImgs.forEach(img => collageObserver.observe(img));
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Select all star-rating containers
+      const ratingContainers = document.querySelectorAll('.star-rating');
+
+      ratingContainers.forEach(container => {
+        // Get the rating from data-rating attribute
+        const rating = parseInt(container.getAttribute('data-rating'));
+
+        // Clear any existing content
+        container.innerHTML = '';
+
+        // Add golden stars
+        for (let i = 0; i < rating; i++) {
+          const star = document.createElement('span');
+          star.innerHTML = '★'; // Unicode for filled star
+          container.appendChild(star);
+        }
+
+        // Add ARIA label for accessibility
+        container.setAttribute('aria-label', `${rating} out of 5 stars`);
+      });
+    });
   </script>
 </body>
 </html>

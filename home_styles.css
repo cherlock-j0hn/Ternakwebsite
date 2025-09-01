@@ -32,6 +32,19 @@ section.visible {
     background-color: white;
 }
 
+.testimonial p {
+    text-align: center;
+    color: #555;
+}
+
+.star-rating {
+    font-size: 20px;
+    color: #f5c518; /* Gold color for stars */
+    margin-bottom: 10px;
+    justify-content: center;
+    display: flex;
+}
+
 .testimonial {
     background: #f8f9fa;
     padding: 1rem;
