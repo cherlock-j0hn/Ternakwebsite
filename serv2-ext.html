@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Exterior Services</title>
+  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="serv2-styles.css">
+  <link rel="stylesheet" href="services_styles.css">
+  <script src="include.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <!-- <img src="images/services_pics/lofts.jpg" alt="Loft" width="100%" height="10%"> -->
+  <div class="container">
+    <!-- Header Section -->
+    <div class="animate-on-scroll">
+      <p class="heading">Exterior Renovations</p>
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-button active" data-filter="all">Roofing and Aluminum</button>
+        <!-- <button class="filter-button" data-filter="waterproofing">Bathroom</button> -->
+        <!-- <button class="filter-button" data-filter="roofing">Roofing and Aluminum</button> -->
+    </div>
+
+    <div class="services-container">
+        <div class="service-card show" data-category="roofing">
+            <h2>ROOFING AND ALUMINUM</h2>
+            <div class="gallery animate-on-scroll">
+                <div class="project">
+                    <div class="project-gallery">
+                        <div class="gallery-image" data-fullsrc="images/services_pics/roof1.jpg" data-caption="View 1">
+                            <img src="images/services_pics/roof1.jpg" alt="View 1">
+                            <div class="gallery-caption">Pic 1</div>
+                        </div>
+                        <div class="gallery-image" data-fullsrc="images/services_pics/roof2.jpg" data-caption="View 2">
+                            <img src="images/services_pics/roof2.jpg" alt="View 2">
+                            <div class="gallery-caption">Pic 2</div>
+                        </div>
+                        <div class="gallery-image" data-fullsrc="images/services_pics/roof3.jpg" data-caption="View 3">
+                            <img src="images/services_pics/roof3.jpg" alt="View 3">
+                            <div class="gallery-caption">Pic 3</div>
+                        </div>
+                        <div class="gallery-image" data-fullsrc="images/services_pics/roof4.jpg" data-caption="View 4">
+                            <img src="images/services_pics/roof4.jpg" alt="View 4">
+                            <div class="gallery-caption">Pic 4: Photo by <a href="https://unsplash.com/@karthickgislen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Karthick Gislen</a> on <a href="https://unsplash.com/photos/a-white-house-with-a-red-tiled-roof-FyrKpMA0W9Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+
+
+
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta animate-on-scroll">
+      <p class="heading">Ready to Transform Your Home?</p>
+      <p class="content1">Contact us today for a free, no-obligation estimate and let’s bring your vision to life!</p>
+      <a href="contact.html">Get a Free Estimate</a>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.filter-button');
+    const servicesContainer = document.querySelector('.services-container');
+    const services = Array.from(document.querySelectorAll('.service-card'));
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        // Get the filter value
+        const filter = button.getAttribute('data-filter');
+
+        // Clear current services
+        servicesContainer.innerHTML = '';
+
+        // Sort and filter services
+        let filteredServices;
+        if (filter === 'all') {
+          filteredServices = services; // Show all services in original order
+        } else {
+          // Prioritize services matching the filter
+          filteredServices = [
+            ...services.filter(service => service.getAttribute('data-category') === filter),
+            ...services.filter(service => service.getAttribute('data-category') !== filter)
+          ];
+        }
+
+        // Append services with animation
+        filteredServices.forEach(service => {
+          service.classList.remove('show');
+          servicesContainer.appendChild(service);
+          setTimeout(() => {
+            if (filter === 'all' || service.getAttribute('data-category') === filter) {
+              service.classList.add('show');
+            }
+          }, 100); // Slight delay for smooth transition
+        });
+      });
+    });
+
+    // Scroll-triggered animations
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(element => observer.observe(element));
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(image => {
+      image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = image.dataset.fullsrc;
+        lightboxImg.alt = image.querySelector('img').alt;
+        lightboxCaption.textContent = image.dataset.caption;
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
+  <div id="footer-placeholder"></div>
+</body>
+</html>

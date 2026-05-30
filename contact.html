@@ -72,13 +72,13 @@
   <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
   <script>
   (function() {
-    emailjs.init("YOUR_USER_ID"); // replace with your EmailJS user ID
+    emailjs.init("user_18ugr7k");
   })();
 
   document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    emailjs.sendForm("service_14gbf4d", "template_39fjt9r", this)
       .then(function() {
         alert("Message sent successfully!");
       }, function(error) {
