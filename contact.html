@@ -69,23 +69,39 @@
   
   </form>
 
-  <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
-  <script>
-  (function() {
-    emailjs.init("0vuhVhr2p0nE0m222");
-  })();
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
+<script>
+(function() {
+    emailjs.init({
+        publicKey: "0vuhVhr2p0nE0m222",
+    });
+})();
+
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+
     event.preventDefault();
 
-    emailjs.sendForm("service_rs1il09", "template_7hsuvsr", this)
-      .then(function() {
+    emailjs.sendForm(
+        "service_rs1il09",
+        "template_7hsuvsr",
+        this
+    )
+    .then(function(response) {
+
         alert("Message sent successfully!");
-      }, function(error) {
+        console.log("SUCCESS!", response.status, response.text);
+
+    }, function(error) {
+
         alert("Failed to send: " + JSON.stringify(error));
-      });
-  });
-  </script>
+        console.log("FAILED...", error);
+
+    });
+
+});
+</script>
 
 
   <p class = "content1"> We look forward to speaking with you about your renovation dreams!</p>
